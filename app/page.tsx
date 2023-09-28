@@ -20,7 +20,7 @@ export default async function IndexPage({
     searchParams.write_key
   )
   // Do something with Cosmic data. For example:
-  // const { objects: posts } = cosmic.objects.find({
+  // const { objects: posts } = await cosmic.objects.find({
   //   type: 'posts'
   // })
   // See the Cosmic docs for more info https://www.cosmicjs.com/docs
