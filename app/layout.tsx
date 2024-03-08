@@ -1,4 +1,5 @@
 import "@/styles/globals.css"
+import { Suspense } from "react"
 import { Metadata } from "next"
 
 import { siteConfig } from "@/config/site"
@@ -36,17 +37,19 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <head />
         <body
           className={cn(
-            "min-h-screen w-full mx-auto flex justify-center bg-light-background font-sans antialiased dark:bg-dark-background",
+            "mx-auto flex min-h-screen w-full justify-center bg-light-background font-sans antialiased dark:bg-dark-background",
             fontSans.variable
           )}
         >
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <div className="relative flex min-h-screen flex-col">
-              <SiteHeader />
-              <div className="flex-1">{children}</div>
-            </div>
-            <TailwindIndicator />
-          </ThemeProvider>
+          <Suspense>
+            <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+              <div className="relative flex min-h-screen flex-col">
+                <SiteHeader />
+                <div className="flex-1">{children}</div>
+              </div>
+              <TailwindIndicator />
+            </ThemeProvider>
+          </Suspense>
         </body>
       </html>
     </>
