@@ -7,13 +7,13 @@ Beautifully designed template built with Next.js, Shadcn UI, Tailwind CSS. Use i
 ```bash
 git clone https://github.com/cosmicjs/cosmic-next-template
 cd cosmic-next-template
-yarn
-yarn dev
+bun
+bun dev
 ```
 
 ## Features
 
-- Next.js 13 App Directory
+- Next.js 14 with App Directory
 - Radix UI Primitives
 - Tailwind CSS
 - Icons from [Lucide](https://lucide.dev)
