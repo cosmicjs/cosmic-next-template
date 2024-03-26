@@ -19,6 +19,8 @@ bun dev
 - Icons from [Lucide](https://lucide.dev)
 - Dark mode with `next-themes`
 - Tailwind CSS class sorting, merging and linting.
+- [Cosmic JavaScript SDK](https://www.npmjs.com/package/@cosmicjs/sdk)
+- Dark mode ready
 
 ## License
 
